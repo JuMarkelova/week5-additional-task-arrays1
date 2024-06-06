@@ -11,11 +11,7 @@ public class Operations {
     }
 
     public static int countNumberOfOdd(int[] numbers) {
-        int count = 0;
-        for (int number : numbers) {
-            if (number % 2 == 1) count++;
-        }
-        return count;
+        return numbers.length - countNumberOfEven(numbers);
     }
 
     public static int countNumberOfPrime(int[] numbers) {
@@ -23,7 +19,6 @@ public class Operations {
         for (int number : numbers) {
             boolean isPrime = true;
             if (number < 0 || number == 1) continue;
-
             for (int i = 2; i < number; i++) {
                 if (number % i == 0) {
                     isPrime = false;
@@ -31,6 +26,34 @@ public class Operations {
                 }
             }
             if (isPrime) count++;
+        }
+        return count;
+    }
+
+    public static int sumOfAll(int[] numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
+    }
+
+    public static int countDifferenceBetweenSumEvenAndOddIndexes(int[] numbers) {
+        int sumOfEvenIndexes = 0;
+        int sumOfOddIndexes = 0;
+        for (int i = 0; i < numbers.length; i += 2) {
+            sumOfEvenIndexes += numbers[i];
+        }
+        for (int i = 1; i < numbers.length; i += 2) {
+            sumOfOddIndexes += numbers[i];
+        }
+        return sumOfEvenIndexes - sumOfOddIndexes;
+    }
+
+    public static int countNumberOfZero(int[] numbers) {
+        int count = 0;
+        for (int number : numbers) {
+            if (number == 0) count++;
         }
         return count;
     }
