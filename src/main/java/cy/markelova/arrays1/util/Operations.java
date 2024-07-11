@@ -44,7 +44,7 @@ public class Operations {
         return sum;
     }
 
-    public static int countDifferenceBetweenSumEvenAndOddIndexes(int[] numbers) {
+    public static int countDifEvenOddIndexes(int[] numbers) {
         int sumOfEvenIndexes = 0;
         int sumOfOddIndexes = 0;
         for (int i = 0; i < numbers.length; i += 2) {

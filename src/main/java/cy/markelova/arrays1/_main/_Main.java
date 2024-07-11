@@ -10,7 +10,7 @@ public class _Main {
         System.out.println(Operations.countNumberOfOdd(numbers));
         System.out.println(Operations.countNumberOfPrime(numbers));
         System.out.println(Operations.sumOfAll(numbers));
-        System.out.println(Operations.countDifferenceBetweenSumEvenAndOddIndexes(numbers));
+        System.out.println(Operations.countDifEvenOddIndexes(numbers));
         System.out.println(Operations.countNumberOfZero(numbers));
     }
 }
