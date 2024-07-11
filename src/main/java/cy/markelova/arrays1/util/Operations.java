@@ -5,7 +5,9 @@ public class Operations {
     public static int countNumberOfEven(int[] numbers) {
         int count = 0;
         for (int number : numbers) {
-            if (number % 2 == 0) count++;
+            if (number % 2 == 0) {
+                count++;
+            }
         }
         return count;
     }
@@ -18,14 +20,18 @@ public class Operations {
         int count = 0;
         for (int number : numbers) {
             boolean isPrime = true;
-            if (number < 0 || number == 1) continue;
+            if (number < 0 || number == 1) {
+                continue;
+            }
             for (int i = 2; i < number; i++) {
                 if (number % i == 0) {
                     isPrime = false;
                     break;
                 }
             }
-            if (isPrime) count++;
+            if (isPrime) {
+                count++;
+            }
         }
         return count;
     }
@@ -53,7 +59,9 @@ public class Operations {
     public static int countNumberOfZero(int[] numbers) {
         int count = 0;
         for (int number : numbers) {
-            if (number == 0) count++;
+            if (number == 0) {
+                count++;
+            }
         }
         return count;
     }
